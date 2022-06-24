@@ -33,28 +33,28 @@ export default function DrawerContent(props) {
 		<View style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
 			<DrawerContentScrollView style={Style.drawerContent} {...props}>
 				<DrawerItem
-					style={{ backgroundColor: menuName['Inicio']}}
-					label={() => <Text style={Style.menuTextStyle, { color: textMenu['Inicio']}}>INICIO</Text>}
+					style={{ backgroundColor: menuName['Inicio'], borderBottomWidth: 2, borderColor: '#B125B4'}}
+					label={() => <Text style={[Style.menuTextStyle, { color: textMenu['Inicio']}]}>INICIO</Text>}
 					onPress={() => changeNavigation('Inicio')}
 				/>
 				<DrawerItem
-					style={{ backgroundColor: menuName['CadastroProjeto']}}
-					label={() => <Text style={Style.menuTextStyle, { color: textMenu['CadastroProjeto']}}>CADASTRO DE PROJETO</Text>}
+					style={{ backgroundColor: menuName['CadastroProjeto'], borderBottomWidth: 2, borderColor: '#B125B4'}}
+					label={() => <Text style={[Style.menuTextStyle, { color: textMenu['CadastroProjeto']}]}>CADASTRO DE PROJETO</Text>}
 					onPress={() => changeNavigation('CadastroProjeto')}
 				/>
 				<DrawerItem
-					style={{ backgroundColor: menuName['ApontamentoHoras']}}
-					label={() => <Text style={Style.menuTextStyle, { color: textMenu['ApontamentoHoras']}}>APONTAMENTO DE HORAS</Text>}
+					style={{ backgroundColor: menuName['ApontamentoHoras'], borderBottomWidth: 2, borderColor: '#B125B4'}}
+					label={() => <Text style={[Style.menuTextStyle, { color: textMenu['ApontamentoHoras']}]}>APONTAMENTO DE HORAS</Text>}
 					onPress={() => changeNavigation('ApontamentoHoras')}
 				/>
 				<DrawerItem
-					style={{ backgroundColor: menuName['ConsultaTimeTask']}}
-					label={() => <Text style={Style.menuTextStyle, { color: textMenu['ConsultaTimeTask']}}>CONSULTA TIME TASK</Text>}
+					style={{ backgroundColor: menuName['ConsultaTimeTask'], borderBottomWidth: 2, borderColor: '#B125B4'}}
+					label={() => <Text style={[Style.menuTextStyle, { color: textMenu['ConsultaTimeTask']}]}>CONSULTA TIME TASK</Text>}
 					onPress={() => changeNavigation('ConsultaTimeTask')}
 				/>
 				<DrawerItem
-					style={{ backgroundColor: menuName['Configuracoes']}}
-					label={() => <Text style={Style.menuTextStyle, { color: textMenu['Configuracoes']}}>CONFIGURAÇÕES</Text>}
+					style={{ backgroundColor: menuName['Configuracoes'], borderBottomWidth: 2, borderColor: '#B125B4' }}
+					label={() => <Text style={[Style.menuTextStyle, { color: textMenu['Configuracoes']}]}>CONFIGURAÇÕES</Text>}
 					onPress={() => changeNavigation('Configuracoes')}
 				/>
 			</DrawerContentScrollView>

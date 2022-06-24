@@ -1,32 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, ScrollView, Dimensions } from "react-native";
-import { Picker } from '@react-native-picker/picker';
 
 import Title1 from '../components/Title1';
 import Title2 from '../components/Title2';
-import Divider from '../components/Divider';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import ButtonMenu from '../components/ButtonMenu';
+import SelectInput from '../components/SelectInput';
+import DatetimeInput from '../components/DatetimeInput';
 
 export default function ApontamentoHoras({ navigation }) {
+    const [startTime, setStartTime] = useState(null);
+    const [finishTime, setFinishTime] = useState(null);
+
     return (
         <ScrollView style={Style.screenViewStyle}>
             <View style={Style.container}>
                 <ButtonMenu navigation={navigation}/>
                 <Title1 text={'Time Task'} />
-                <Title2 text={'CADASTRAR PROJETOS'} />
-                <Title2 text={'Preencha os campos abaixo'} />
-                <Divider/>
+                <Title2 text={'APONTAR HORAS'} />
                 <Input
-                    placeholder={'Squad'}
+                    placeholder={'Descreva sua task'}
                 />
-                <Input
-                    placeholder={'Nome do Projeto'}
+                <SelectInput
+                    placeholder="Selecione um projeto"
+                />
+
+                <DatetimeInput
+                    placeholder="Iniciado"
+                    vModel={setStartTime}
+                    value={startTime}
+                />
+                <DatetimeInput
+                    placeholder="Finalizado"
+                    vModel={setFinishTime}
+                    value={finishTime}
                 />
                 <Button
                     setType={'primary'}
-                    label={'CADASTRAR'}
+                    label={'SALVAR'}
+                    actionOnPress={ () => navigation.navigate('MenuRoute') }
+                />
+                <Button
+                    setType={'primary'}
+                    label={'CONSULTAR'}
                     actionOnPress={ () => navigation.navigate('MenuRoute') }
                 />
             </View>
@@ -48,5 +65,5 @@ const Style = StyleSheet.create({
         backgroundColor: 'red',
         height: Dimensions.get('window').height,
         padding: 0
-    }
+    },
  })

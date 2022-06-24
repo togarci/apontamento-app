@@ -30,13 +30,15 @@ const Style = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 12
+        margin: 12,
     },
     primary: {
         backgroundColor: '#B125B4',
-        color: '#fff'
+        color: '#fff',
+        fontSize: 18
     },
     secondary: {
-        color: '#898686'
+        color: '#898686',
+        fontSize: 18
     }
 });
